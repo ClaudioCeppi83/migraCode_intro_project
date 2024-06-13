@@ -12,7 +12,8 @@
 
         /** Secondary **/
         --brunswick-green: #344e41ff; /* content */
-        --sage: #a3b18aff;/* Secondary background*/
+        --sage: #a3b18aff; /* Secondary background*/
+        --ashGrey: #CFD6C2ff; /* tertiary background*/
         --dark-green: #192418ff; /* Secondary content */
 
 }
@@ -44,11 +45,31 @@ input, button, textarea, select {
 p {
     text-wrap: pretty;
     color: var(--cal-poly-green);
+    font-size: 2rem;
 }
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-titles);
     text-wrap: balance;
     color: var(--brunswick-green);
+}
+h1 {
+    font-size: 4.3rem;
+}
+h2 {
+    font-size: 3.4rem;
+}
+h3 {
+    font-size: 2.6rem;
+}
+a {
+    font-size: 2rem;
+}
+mark {
+    background-color: var(--dark-green);
+    color: var(--ashGrey);
+    font-weight: bold;
+    padding: 0.1rem 0.5rem;
+    border-radius: 0.6rem;
 }
 img, video, svg {
     height: auto; max-width: 100%;
@@ -65,6 +86,10 @@ img, video, svg {
 
 /* Global settings */
 
+.header, .nav, .main, .footer {
+    width: 50vw;
+}
+
 .header {
     display: flex;
     flex-direction: column;
@@ -74,58 +99,72 @@ img, video, svg {
     background-color: var(--sage);
     color: var(--dark-green);
     margin: 0;
-    width: 100vw;
     padding: 1rem;
+    border-radius: 3rem 3rem 0 0;
 }
 
 .nav {
     display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
     background-color: var(--sage);
-    gap: 6rem;
     padding: 2rem;
-    width: 100vw;
 }
 
-.nav li, a {
-    color: var(--cal-poly-green);
+.nav ul {
+    display: flex;
+    justify-content: space-between;
+    gap: 6rem;
+}
+
+.nav a, li {
     text-decoration: none;
     list-style-type: none;
-}
-
-.dropbtn {
-    background-color: var(--sage);
     color: var(--cal-poly-green);
-    border: none;
-    cursor: pointer;
+    padding: 0.8rem 1.5rem;
+    
+    border-radius: 1rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.dropdown {
-    position: relative;
-    display: inline-block;
+.nav a:hover {
+    background-color: var(--dark-green);
+    color: var(--white-smoke);
 }
 
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: var(--sage);
-    color: var(--dark-green);
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem;
     text-align: center;
-    padding: 2rem 0;
-    width: 14rem;
 }
 
-.dropdown-content a:hover {
+.intro p, .camino p, .cambio p {
+    text-align: justify;
+}
+
+.main {
     background-color: var(--sage);
-    color: var(--dark-green);
 }
 
-.dropdown:hover .dropdown-content {
-    display: block;
+.intro, .camino, .cambio {
+    background-color: rgba(207, 214, 194, 0.35); /* ashGrey color with transparency */
+    padding: 2rem;
+    border-radius: 1.5rem;
 }
 
-.dropdown:hover .dropbtn {
-    background-color: var(--sage);
+.intro__title, .camino__title, .cambio__title {
+    margin: 2rem;
+}
+
+h3 {
+    text-align: left;
+    padding: 2rem;
+}
+
+.intro__content {
+    
 }
