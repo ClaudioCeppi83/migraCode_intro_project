@@ -15,16 +15,16 @@
 		<p>by Claudio Ceppi</p>
 	</header>
     <nav class="nav">
-        <ul class="nav-menu">
-            <li><a href="#intro">Introducción</a></li>
-            <li><a href="#camino">Camino Migratorio</a></li>
-                <ul class="nav-menu__camino">
-                    <li><a href="#usa">Estados Unidos</a></li>
-                    <li><a href="#peru">Perú</a></li>
-                    <li><a href="#espana">España</a></li>
-                </ul>
-            <li><a href="#cambio">Cambio de Carrera</a></li>
-        </ul>
+        <li><a href="#intro">Introducción</a></li>
+        <li class="nav__camino dropdown">
+            <button class="dropbtn">Camino Migratorio</button>
+            <ul class="dropdown-content">
+                <li><a href="#usa">Estados Unidos</a></li>
+                <li><a href="#peru">Perú</a></li>
+                <li><a href="#espana">España</a></li>
+            </ul>
+        </li>
+        <li><a href="#cambio">Cambio de Carrera</a></li>
     </nav>
     <main class="main">
         <section class="intro" id="intro">

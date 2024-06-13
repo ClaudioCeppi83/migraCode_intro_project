@@ -73,19 +73,59 @@ img, video, svg {
     text-align: center;
     background-color: var(--sage);
     color: var(--dark-green);
-    margin: 0 auto;
+    margin: 0;
     width: 100vw;
     padding: 1rem;
 }
 
-.nav-menu {
+.nav {
     display: flex;
-    justify-content: space-between;
+    flex-direction: row;
+    justify-content: center;
     align-items: center;
-    width: 100%;
-    padding: 1rem;
-    list-style-type: none;
-    gap: 2rem;
+    background-color: var(--sage);
+    gap: 6rem;
+    padding: 2rem;
+    width: 100vw;
 }
 
+.nav li, a {
+    color: var(--cal-poly-green);
+    text-decoration: none;
+    list-style-type: none;
+}
 
+.dropbtn {
+    background-color: var(--sage);
+    color: var(--cal-poly-green);
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--sage);
+    color: var(--dark-green);
+    text-align: center;
+    padding: 2rem 0;
+    width: 14rem;
+}
+
+.dropdown-content a:hover {
+    background-color: var(--sage);
+    color: var(--dark-green);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: var(--sage);
+}
