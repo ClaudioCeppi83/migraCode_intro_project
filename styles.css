@@ -7,14 +7,14 @@
     /** colors **/
 
         /** Primary **/
-        --cal-poly-green: #345039ff; /* Titles */
-        --white-smoke: #f6f5f3ff; /* Background */
+        --sapphire: #024EB6; /* Titles */
+        --seasalt: #F8F8F8; /* Background */
 
         /** Secondary **/
-        --brunswick-green: #344e41ff; /* content */
-        --sage: #a3b18aff; /* Secondary background*/
-        --ashGrey: #CFD6C2ff; /* tertiary background*/
-        --dark-green: #192418ff; /* Secondary content */
+        --indiaGreen: #0F851B; /* content */
+        --ferrariRed: #E1090B; /* Secondary color*/
+        --ashGrey: #CFD6C2ff; /* Optional content*/
+        --dark-green: #192418ff; /* Optional backgroud */
 
 }
 /** global settings **/
@@ -37,20 +37,21 @@ body {
     min-height: 100dvh;
     width: 100vw;
     font-size: 1.6rem;
-    background-color: var(--white-smoke);
+    line-height: 2.8rem;
+    background-color: var(--seasalt);
 }
 input, button, textarea, select {
     font: inherit;
 }
 p {
     text-wrap: pretty;
-    color: var(--cal-poly-green);
+    color: var(--indiaGreen);
     font-size: 2rem;
 }
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-titles);
     text-wrap: balance;
-    color: var(--brunswick-green);
+    color: var(--sapphire);
 }
 h1 {
     font-size: 4.3rem;
