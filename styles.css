@@ -151,10 +151,18 @@ img, video, svg {
     background-color: var(--sage);
 }
 
-.intro, .camino, .cambio {
-    background-color: rgba(207, 214, 194, 0.35); /* ashGrey color with transparency */
+.intro, .camino, .cambio, .header, .nav {
+    background-color: rgb(207, 214, 194, 0.35); /* ashGrey color with transparency */
     padding: 2rem;
     border-radius: 1.5rem;
+}
+
+.header {
+    border-radius: 1.5rem 1.5rem 0 0;
+}
+
+.nav {
+    border-radius: 0 0 1.5rem 1.5rem;
 }
 
 .intro__title, .camino__title, .cambio__title {
