@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header class="header">
+    <header class="header"  id="header">
 		<h1>Mi Camino: Una historia de migracion</h1>
 		<p>by Claudio Ceppi</p>
 	</header>
@@ -21,8 +21,9 @@
             <li><a href="#cambio">Cambio de Carrera</a></li>
         </ul>
     </nav>
-    <main class="main">
+    <main class="container">
         <section class="intro" id="intro">
+            <a href="#header" class="back-to-top">↑</a>
             <h2 class="intro__title">Introducción</h2>
             <article  class="intro__content">
                 <p>
@@ -38,19 +39,28 @@
 
             </p>
             <article class="usa" id="usa">
-                <h3 class="title">Estados Unidos</h3>
+                <div class="camino__article--title">
+                    <h3 class="title">Estados Unidos</h3>
+                    <img src="image/circle-usa-flag-icon.svg" alt="usa flag icon" width="30">
+                </div>
                 <p class="content">
                     En <strong>agosto de 2016</strong>, viajé a Chicago, <strong>Estados Unidos</strong>. Permanecí allí durante los 6 meses permitidos por mi visa de turista, trabajando en un puesto comercial en un mall y en un sitio de comida rápida. Sin poder gestionar una visa de residencia legal, decidí probar suerte en otro país.
                 </p>
             </article>
             <article class="peru" id="peru">
-                <h3 class="title">Perú</h3>
+                <div class="camino__article--title">
+                    <h3 class="title">Perú</h3>
+                    <img src="image/circle-peru-flag-icon.svg" alt="peru flag icon" width="30">
+                </div>
                 <p class="content">
                     En <strong>enero de 2017</strong>, llegué a Lima, <strong>Perú</strong>, y permanecí allí por <strong>7 años</strong>. Trabajé en el sector gastronómico en diversos cargos de servicio al cliente. Mi primer trabajo fue en una cafetería dentro de un edificio de oficinas. La pandemia de <strong>2020</strong> me dejó sin trabajo por un año, agotando mis ahorros. Luego, trabajé en una panadería francesa y finalmente en un restaurante italiano, donde ascendí a <strong>jefe de sección</strong>.
                 </p>
             </article>
             <article class="espana" id="espana">
-                <h3 class="title">España</h3>
+                <div class="camino__article--title">
+                    <h3 class="title">España</h3>
+                    <img src="image/circle-spain-flag-icon.svg" alt="spain flag icon" width="30">
+                </div>
                 <p class="content">
                     En <strong>febrero de 2024</strong>, llegué a <strong>España</strong>. Aunque aún no he encontrado empleo debido a mi situación, quiero cambiar de carrera profesional hacia el <strong>desarrollo web</strong> para aprovechar las oportunidades de trabajo remoto.
                 </p>
@@ -68,7 +78,7 @@
         </section>
     </main>
     <footer class="footer">
-        <p>© 2023 Claudio Ceppi</p>
+        <p>Claudio Ceppi © 2024</p>
     </footer>
 </body>
 </html>

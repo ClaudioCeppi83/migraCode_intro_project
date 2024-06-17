@@ -21,6 +21,7 @@
 html {
     box-sizing: border-box;
     font-size: 62.5%;
+    scroll-behavior: smooth;
 }
 * {
     margin: 0; padding: 0;
@@ -87,8 +88,11 @@ img, video, svg {
 
 /* Global settings */
 
-.header, .nav, .main, .footer {
-    width: 50vw;
+.header, .nav, .container, .footer {
+    width: 70%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0;
 }
 
 .header {
@@ -97,18 +101,19 @@ img, video, svg {
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-color: var(--sage);
-    color: var(--dark-green);
-    margin: 0;
+    line-height: 4.5rem;
+    background-color: rgb(207, 214, 194, 0.35); /* ashGrey color with transparency */
+    color: var(--indiaGreen);
     padding: 1rem;
-    border-radius: 3rem 3rem 0 0;
+    border-radius: 1.5rem 1.5rem 0 0;
 }
 
 .nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--sage);
+    background-color: rgb(207, 214, 194, 0.35); /* ashGrey color with transparency */
+    border-radius: 0 0 1.5rem 1.5rem;
     padding: 2rem;
 }
 
@@ -119,27 +124,26 @@ img, video, svg {
 }
 
 .nav a, li {
-    text-decoration: none;
+    text-decoration: wavy;
     list-style-type: none;
-    color: var(--cal-poly-green);
+    color: var(--indiaGreen);
     padding: 0.8rem 1.5rem;
-    
     border-radius: 1rem;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .nav a:hover {
-    background-color: var(--dark-green);
-    color: var(--white-smoke);
+    background-color: var(--ferrariRed);
+    color: var(--ashGrey);
 }
 
-.main {
+.container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 2rem;
-    padding: 2rem;
+    padding: 2rem 0;
     text-align: center;
 }
 
@@ -147,22 +151,10 @@ img, video, svg {
     text-align: justify;
 }
 
-.main {
-    background-color: var(--sage);
-}
-
-.intro, .camino, .cambio, .header, .nav {
+.intro, .camino, .cambio, .footer {
     background-color: rgb(207, 214, 194, 0.35); /* ashGrey color with transparency */
     padding: 2rem;
     border-radius: 1.5rem;
-}
-
-.header {
-    border-radius: 1.5rem 1.5rem 0 0;
-}
-
-.nav {
-    border-radius: 0 0 1.5rem 1.5rem;
 }
 
 .intro__title, .camino__title, .cambio__title {
@@ -172,4 +164,69 @@ img, video, svg {
 h3 {
     text-align: left;
     padding: 2rem;
+}
+
+.camino__article--title {
+    display: flex;
+}
+
+.back-to-top {
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    z-index: 1000;
+    font-size: 3rem;
+    text-decoration: none;
+    color: var(--seasalt);
+    background-color: var(--sapphire);
+    padding: 1.5rem;
+    padding-bottom: 2.3rem;
+    border-radius: 35%;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.back-to-top:hover {
+    background-color: var(--ferrariRed);
+    color: var(--seasalt);
+}
+
+.footer {
+    text-align: center;
+    color: var(--indiaGreen);
+    border-radius: 1.5rem 1.5rem 0 0;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .header, .nav, .container, .footer {
+        width: 90vw;
+    }
+
+    .nav ul {
+        flex-direction: column;
+        gap: 0.05rem;
+        background-color: rgb(207, 214, 194, 0.55);
+        border-radius: 1rem;
+    }
+
+    .back-to-top {
+        font-size: 1.5rem;
+        padding: 0.1rem 0.8rem 0.5rem 0.8rem;
+    }
+
+    h1 {
+        font-size: 3.2rem;
+    }
+
+    h2 {
+        font-size: 2.6rem;
+    }
+
+    h3 {
+        font-size: 2.2rem;
+    }
+
+    p, a {
+        font-size: 1.8rem;
+    }
 }
